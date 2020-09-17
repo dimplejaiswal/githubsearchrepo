@@ -1,4 +1,5 @@
 const handleConvertPayload = (request, h) => {
+    if (!request || !request.payload) return h.response({}).code(400);
     const refObj = {};
     const res = [];
     const pendingArray = [];
